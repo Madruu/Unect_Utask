@@ -1,0 +1,959 @@
+
+
+body{
+    background: #FAFAFA;
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #226ED8;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.inner_header{
+    width: 1600px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: #226ED8;
+}
+
+.logo_unect{
+    position: absolute;
+    width: 23.28px;
+    height: 40px;
+    left: 160px;
+    top: 20px;
+
+    background-image: url(img/logowhite.png);
+    background-size: contain;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.light_mode{
+    position: absolute;
+    width: 50px;
+    height: 24px;
+    right: 160px;
+    top: 28px;    
+    background-image: url(img/botaoLight.png);
+}
+
+h1{
+    position: absolute;
+    width: 147px;
+    height: 45px;
+    left: 870px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FAFAFA;
+}
+
+footer{
+    position: absolute;
+    display: flex;
+    background: #114FA7;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.footer{
+    font-family: 'Poppins';
+    width: 100%;
+    padding-top: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 160px;
+}
+
+.footer h4{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    align-items: center;
+    display: flex;
+}
+
+.footer p{
+    text-align: center;
+    font-size: 14px;
+    left: 927px;
+    top: 0px;
+    color: white;
+    align-items: center;
+    font-weight: 400;
+}
+
+.footer span{
+    font-weight: 600;
+}
+
+.caixa_frases{
+    font-family: 'Poppins';
+    position: absolute;
+    width: 620px;
+    height: 119px;
+    left: 160px;
+    top: 112px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+}
+
+.frase_frases .paragrafo_frase p{
+    width: 532px;
+    left: 228px;
+    top: 152px;
+
+    font-size: 14px;
+    margin-left: 68px;
+    line-height: 21px;
+}
+
+.frase_frases .frase_do_dia h4{
+    width: 75px;
+    height: 7px;
+    left: 227px;
+    top: 128px;
+
+    font-size: 12px;
+    margin-left: 67px;
+    margin-top: 16px;
+}
+
+.icone_frases{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 16px;
+    top: 16px;
+    background-image: url(img/icone_frases.png);
+}
+
+.icone_a_fazer{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 423px;
+    top: 260px;
+    background-image: url(img/icone_a_fazer.svg);
+    background-size: 100%;
+}
+
+.a_fazer{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+/* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.a_fazer .container{
+    position: absolute;
+    width: 100%;
+    height: 121.75vh;
+    background: rgba(20, 20, 20, 0.4);
+    display: flex;
+    align-items: center;
+}
+
+.inner_a_fazer{
+    width: 31.6vh;
+    height: 17.6vw;
+    left: 160px;
+    top: 310px;
+    margin-top: 230px;
+    margin-left: 169px;
+
+    background: #EEEEEE;
+    border-radius: 10px;   
+}
+
+.a_fazer p1{
+    position: absolute;
+    width: 120px;
+    height:30px;
+    left: 170px;
+    top: 263px;
+    font-size: 27px;
+}
+
+.a_fazer .inner_a_fazer .parte_conta_luz h4{
+    position: relative;
+    font-size: 14px;
+    width: 192px;
+    height: 50px;
+    left: 15px;
+    top: 4px;
+    margin: 0; 
+}
+
+.a_fazer .parte_conta_luz{
+    position: relative;
+    width: 253px;
+    height: 74px;
+    margin-left: 19px;
+    top: 16px;
+    
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.a_fazer .parte_conta_luz p{
+    position: absolute;
+    width: 145px;
+    height: 18px;
+    left: 0px;
+    top: 20px;
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+.a_fazer .parte_conta_luz .icone_xevron{
+    position: absolute;
+    display: flex;
+    width: 12px;
+    height: 8px;
+    left: 117px;
+    top: 46px;
+    background-size: 100%;
+    background-image: url(img/icone_xevron.svg);
+}
+
+.a_fazer .parte_conta_luz .icone_trespontos{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 235px;
+    top: 14px;
+    background-size: 100%;
+    background-image: url(img/icone_trespontos.svg);
+}
+
+.botao_excluir{
+    position: absolute;
+    width: 71px;
+    height: 31px;
+    left: 173px;
+    top: 32px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.icone_lixo{
+    position: relative;
+    margin-left: 0px;
+    width: 10px;
+    height: 12px;
+    left: 7px;
+    top: 9px;
+    color: #DF0000;
+    background-image: url(img/icone_lixo.svg);
+
+}
+
+.botao_excluir p2{
+    position: relative;
+    width: 38px;
+    height: 18px;
+    left: 25px;
+    bottom: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #DF0000;
+}
+
+.parte_compras{
+    position: relative;
+    width: 253px;
+    height: 116px;
+    margin-left: 19px;
+    top: 14px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.parte_compras h4{
+    position: relative;
+    width: 225px;
+    height: 21px;
+    left: 12px;
+    top: 13px;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.parte_compras .icone_3pts{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 235px;
+    top: 14px;
+    background-size: 100%;
+    color: #141414;
+    background-image: url(img/icone_3pts.svg);
+}
+
+.parte_compras p{
+    position: relative;
+    width: 139px;
+    height: 18px;
+    left: 12px;
+    top: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;   
+    color: #002D6C;
+}
+
+.parte_compras .icone_paracima{
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    left: 155px;
+    top: 52px;
+    display: flex;
+    align-items: center;
+    background-size: 100%;
+    color: #002D6C;
+    background-image: url(img/icone_paracima.svg);
+
+}
+
+.parte_compras p2{
+    position: relative;
+    width: 163px;
+    height: 36px;
+    left: 12px;
+    bottom: 3px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #141414;
+}
+
+.parte_compras .icone_direita{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 221px;
+    top: 84px;
+    background-image: url(img/icone_direita.svg);
+}
+
+.parte_manicure{
+    position: relative;
+    width: 254px;
+    height: 74px;
+    left: 18px;
+    top: 12px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.parte_manicure h4{
+    position: relative;
+    left: 4.74%;
+    right: 19.37%;
+    top: 16.22%;
+    bottom: 55.41%;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.parte_manicure p{
+    position: relative;
+    left: 4.74%;
+    right: 63.64%;
+    top: 3.11%;
+    bottom: 17.57%;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+.parte_manicure .icone_3pts{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 235px;
+    top: 14px;
+    background-size: 100%;
+
+    color: #141414;
+    background-image: url(img/icone_3pts.svg);
+}
+
+.parte_manicure .scroll{
+    position: relative;
+    width: 6px;
+    height: 270px;
+    left: 263px;
+    bottom: 292px;
+
+    background: #C4C4C4;
+    border-radius: 20px;
+}
+
+.em_andamento{
+    margin: 0;
+    width: 300px;
+    height: 200px;
+    left: 23px;
+    top: 647px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.em_andamento p{
+    position: absolute;
+    width: 219px;
+    height: 30px;
+    left: 495px;
+    bottom: 608px;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 30px;
+    display: flex;
+
+    color: #141414;
+}
+
+.inner_em_andamento{
+    position: relative;
+    width: 31.6vh;
+    height: 17.6vw;
+    left: 493px;
+    bottom: 269px;
+
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.inner_em_andamento .fazer_manicure{
+    position: relative;
+    width: 13.3vw;
+    height: 7.9vh;
+    margin-left: 20px;
+    bottom: 1px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.fazer_manicure h4{
+    position: relative;
+    top: 11px;
+    left: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.fazer_manicure p{
+    position: relative;
+    left: 5.74%;
+    right: 93.64%;
+    bottom: 6.9%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    color: #141414;
+}
+
+.fazer_manicure .icone_3pts{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 92.96%;
+    right: 1.41%;
+    top: 17%;
+    bottom: 2.35%;
+    background-size: 100%;
+    background-image: url(img/icone_3pts.svg);
+}
+
+.fazer_manicure .icone_esquerda{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 195px;
+    top: 40px;
+
+    background-image: url(img/icone_esquerda.svg);
+
+}
+
+.fazer_manicure .icone_direita{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 220px;
+    top: 40px;
+    bottom: 18px;
+
+    background-image: url(img/icone_direita.svg);
+}
+
+.feito{
+    position: absolute;
+    margin: 0;
+    width: 450px;
+    height: 200px;
+    left: 830px;
+    top: 248.5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.feito p{
+    position: relative;
+    width: 48px;
+    height: 30px;
+    left: 4px;
+    bottom: 69.5px;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.feito .inner_feito{
+    position: relative;
+    width: 15.5vw;
+    height: 36.3vh;
+    right: 58px;
+    top: 129.5px;
+
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.inner_feito .fazer_manicure_feito{
+    position: relative;
+    width: 13.3vw;
+    height: 7.9vh;
+    left: 23px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.fazer_manicure_feito h4{
+    position: relative;
+    left: 12.74px;
+    right: 19.37px;
+    top: 11.22px;
+    bottom: 55.41px;
+    font-size: 14px;
+    line-height: 21px;
+
+    display: flex;
+    align-items: center;
+    text-decoration-line: line-through;
+
+    color: #141414;
+}
+
+.fazer_manicure_feito p{
+    position: relative;
+    width: 45vw;
+    left: 14.74px;
+    right: 63.64px;
+    top: 1.11px;
+    bottom: 17.57px;
+    font-size: 14px;
+    line-height: 18px;
+
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.fazer_manicure_feito .icone_3pts{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 92.06%;
+    right: 1.1%;
+    top: 19%;
+    bottom: 67.35%;
+    background-size: 100%;
+
+    background-image: url(img/icone_3pts.svg);
+}
+
+.icone_atualizar{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 87.35%;
+    right: 4.74%;
+    top: 56.05%;
+    bottom: 18.92%;
+
+    background-image: url(img/icone_atualizar.svg);
+
+}
+
+.fazer_manicure_feito .icone_esquerda{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 195px;
+    top: 41.5px;
+
+    background-image: url(img/icone_esquerda.svg);
+
+}
+
+
+
+@media screen and (max-width: 600px){
+    .inner_header h1{
+        position: absolute;
+        top: 7px;
+        left: 150px;
+        font-size: 20px;
+    }
+
+    .inner_header .logo_unect{
+        left: 35px;
+    }
+
+    .inner_header .light_mode{
+        right: 35px;
+    }
+
+    .caixa_frases{
+        font-family: 'Poppins';
+        width: 287px;
+        height: 60px;
+        left: 53px;
+        top: 110px;
+
+        background: #FFD569;
+        border-radius: 10px;
+    }
+
+    .frase_frases .frase_do_dia h4{
+        position: relative;
+        width: 97px;
+        height: 24px;
+        left: 11px;
+        top: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -0.017em;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .frase_frases .icone_frases{
+        width: 44px;
+        height: 44px;
+        left: 22px;
+        top: 8px;
+    }
+
+    .frase_frases .paragrafo_frase p{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .a_fazer .icone_a_fazer{
+        width: 30px;
+        height: 30px;
+        left: 261px;
+        top: 80px;
+    }
+
+    .a_fazer{
+        position: absolute;
+        width:100vw;
+        height:80vh;
+        left: 45px;
+        top: 128px;
+
+    }
+    
+    .a_fazer p1{
+        position: absolute;
+        width: 120px;
+        height:30px;
+        left: 8.5px;
+        top: 70px;
+        padding-top: 9px;
+        font-size: 27px;
+    }
+
+    .a_fazer .inner_a_fazer{
+        position: relative;
+        width: 33vh;
+        height: 110.6vw;
+        left: 0.5px;
+        top: 6px;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-bottom: 40px;
+
+        background: #EEEEEE;
+        border-radius: 10px;   
+    }
+    
+    .a_fazer .inner_a_fazer .parte_conta_luz h4{
+        left: 15px;
+    }
+    
+    .a_fazer .parte_conta_luz{
+        position: absolute;
+        top: 15px;
+    }
+    
+    .a_fazer .parte_conta_luz p{
+        font-size: 14px;
+    }
+    
+    .a_fazer .parte_conta_luz .icone_xevron{
+        left: 117px;
+        top: 46px;
+    }
+    
+    .a_fazer .parte_conta_luz .icone_trespontos{
+        left: 235px;
+        top: 14px;
+    }
+    
+    .botao_excluir{
+        left: 173px;
+        top: 32px;
+    }
+    
+    .icone_lixo{
+        left: 7px;
+        top: 9px;
+    }
+    
+    .botao_excluir p2{
+        left: 25px;
+        bottom: 5px;
+    }
+    
+    .parte_compras{
+        position: relative;
+        top: 35px;
+    }
+    
+    .parte_compras h4{
+        font-size: 14px;
+    }
+    
+    .parte_compras .icone_3pts{
+        left: 235px;
+        top: 14px;
+    }
+    
+    .parte_compras p{
+        font-size: 14px;
+    }
+    
+    .parte_compras .icone_paracima{
+        left: 155px;
+        top: 52px;
+    }
+    
+    .parte_compras p2{
+        font-size: 12px;
+    }
+    
+    .parte_compras .icone_direita{
+        left: 221px;
+        top: 84px;
+    }
+    
+    .parte_manicure{
+        position: relative;
+        top: 37px;
+    }
+    
+    .parte_manicure h4{
+        font-size: 14px;
+    }
+    
+    .parte_manicure p{
+        font-size: 12px;
+    }
+    .parte_manicure .icone_3pts{
+        left: 235px;
+        top: 14px;
+    }
+    
+    .parte_manicure .scroll{
+        left: 263px;
+        bottom: 292px;
+    }
+
+    .inner_a_fazer .icone_seta_mobile{
+        position: relative;
+        width: 3vw;
+        height: 2.3vh;
+        top: 202px;
+        right: 32px;
+        background-size: 100%;
+        color: #226ED8;
+        background-image: url(img/icone_seta_mobile.svg);
+    }
+
+    .inner_a_fazer .icone_seta_2{
+        position: relative;
+        width: 3vw;
+        height: 2.3vh;
+        top: 185px;
+        left: 310px;
+        background-size: 100%;
+        transform: scaleX(-1);
+        color: #226ED8;
+        background-image: url(img/icone_seta_mobile.svg);
+    }
+
+    .inner_a_fazer .icone_carrosel{
+        position: relative;
+        width: 3.2vw;
+        height: 1.47vh;
+        top: 435px;
+        left: 110px;
+        background-size: 100%;
+        display: flex;
+        color:  #226ED8;
+        background-image: url(img/icone_carrosel.svg);
+    }
+}
+/*PROXIMA ATIVIDADE: FAZER @MEDIA PARA O FOOTER*/
+@media screen and (max-width: 900px){
+    footer{
+        position: absolute;
+        display: flex;
+        background: #114FA7;
+        position: absolute;
+        width: 100%;
+        height: 70px;
+        left: 0px;
+        top: 796px;
+    }
+
+    .footer{
+        font-family: 'Poppins';
+        width: 100%;
+        padding-top: 0px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 160px;
+    }
+
+    .footer h4{
+        position: absolute;
+        width: 266px;
+        height: 21px;
+        left: 20px;
+        top: 13px;
+        margin: 0;
+    }
+
+    .footer p{
+        position: absolute;
+        width: 246px;
+        height: 21px;
+        left: 19px;
+        top: 25px;
+    }
+} 
+
+
+/*PROCURAR COMO CRIAR MAIS DE UM @MEDIA NO CSS*/
+/*TROCAR TODAS AS POSIÇÕES DOS RETÂNGULOS PARA VW E VH EM VEZ DE PX*/

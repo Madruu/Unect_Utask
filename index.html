@@ -32,7 +32,26 @@
             <h4>Vitor E. N. de Tulio</h4>-->
         </div>
     </footer>
+    <div class = "container_frases">
+        <div class = "popup_frases">
+            <div class = "icone_fechar_frase"></div>
+            <div class = "icone_frases_container"></div>
+            <div class = "frase_do_dia">
+                <h4>Frase do dia</h4>
+                <p>Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, 
+                    acredite em você porque Deus já te deu tudo o que você precisa para você vencer.</p>
+            </div>
+        </div>
+    </div>
     <div class = "caixa_frases">
+        <!--<div class = "container_frases">
+            <div class = "icone_frases_container"></div>
+            <div class = "frase do dia">
+                <h4>Frase do dia</h4>
+            </div>
+            <p>Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, 
+                acredite em você porque Deus já te deu tudo o que você precisa para você vencer.</p>
+        </div>-->
         <div class = "frase_frases">
             <div class = "icone_frases"></div>
             <div class = "frase_do_dia">
@@ -44,25 +63,42 @@
             </div>
         </div>
     </div>
-    <div class = "a_fazer">
-        <div class = "icone_a_fazer"></div>
-        <div class = "container">
+    <div class = "carrosel" id = "carousel">
+        <div class = "icone_seta_mobile" id = "icone_prev" ></div>
+        <div class = "icone_seta_2" id = "icone_next"></div>
+        <div class = "icone_carrosel"></div>
+        <div class = "icone_carrosel_cinza"></div>
+        <div class = "icone_carrosel_cinza2"></div>
+    <div class = "a_fazer slide on">
+        <div class = "icone_a_fazer" onclick = "togglePopup()"></div>
+        <div class = "container" id = "popup1"><!--LINHA 49-->
             <div class = "popup">
+                <div class = "icone_fechar" onclick = "togglePopup()"></div>
+                <div class = "linha_azul"></div>
+                <h4>Nova Task</h4>
+                <p>Título *</p>
+                <div class = "inner_titulo" id = "texto-titulo">
+                    <input type="text" placeholder = "Enviar depoimento para o site da Unect" id = "titulo-input">
+                </div>
+                <p3>Descrição</p3>
+                <div class = "inner_descricao" id = "texto-desc">
+                    <textarea type="text" placeholder="Eu achava que precisava entrar na Unect para ser uma pessoa melhor,mas vi que precisava ser uma pessoa melhor para entrar na Unect." id="descricao-input"></textarea>
+                </div>
+                <div class = "criar_task" id = "botao-cria-task" onclick = "addTask()">
+                    <p5>Criar task</p5>
+                </div>
                 
             </div>
-        </div>
-        <p1>A fazer</p1>
-        <div class = "inner_a_fazer">
-            <div class = "icone_seta_mobile"></div>
-            <div class = "icone_seta_2"></div>
-            <div class = "icone_carrosel"></div>
-            <div class = "parte_conta_luz">
-                <div class = "icone_xevron"></div>
-                <div class = "icone_trespontos"></div>
-                <h4>Pagar conta de luz</h4>
-                <p>Ler descrição</p>
-                <div class = "botao_excluir">
-                    <div class = "icone_lixo"></div>
+        </div><!--LINHA 53-->
+            <p1>A fazer</p1>
+            <div class = "inner_a_fazer" id = "list-container">
+                <div class = "parte_conta_luz">
+                    <div class = "icone_xevron"></div>
+                    <div class = "icone_trespontos"></div>
+                    <h4>Pagar conta de luz</h4>
+                    <p>Ler descrição</p>
+                    <div class = "botao_excluir">
+                        <div class = "icone_lixo"></div>
                     <p2>Excluir</p2>
                 </div>
             </div>
@@ -78,23 +114,23 @@
                 <h4>Fazer manicure</h4>
                 <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
                 <div class = "icone_3pts"></div>
-                <div class = "scroll"></div>
+            </div>
+
+    </div>
+        </div>
+        <div class = "em_andamento slide">
+            <p>Em andamento</p>
+            <div class = "inner_em_andamento">
+                <div class = "fazer_manicure">
+                    <h4>Fazer manicure</h4>
+                    <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
+                    <div class = "icone_3pts"></div>
+                    <div class = "icone_direita"></div>
+                    <div class = "icone_esquerda"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class = "em_andamento">
-        <p>Em andamento</p>
-        <div class = "inner_em_andamento">
-            <div class = "fazer_manicure">
-                <h4>Fazer manicure</h4>
-                <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
-                <div class = "icone_3pts"></div>
-                <div class = "icone_direita"></div>
-                <div class = "icone_esquerda"></div>
-            </div>
-        </div>
-    </div>
-    <div class = "feito">
+    <div class = "feito slide">
         <p>Feito</p>
         <div class = "inner_feito">
             <div class = "fazer_manicure_feito">
@@ -106,5 +142,7 @@
             </div>
         </div>
     </div>
+</div>
+    <script src = "script.js" defer></script>
 </body>
 </html>

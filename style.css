@@ -5,6 +5,8 @@ body{
     margin: 0;
 }
 
+
+
 .header{
     width: 100%;
     height: 80px;
@@ -175,13 +177,192 @@ footer{
     color: #141414;
 }
 
-.a_fazer .container{
+.container{
     position: absolute;
     width: 100%;
-    height: 121.75vh;
+    height: 121.65vh;
     background: rgba(20, 20, 20, 0.4);
+    display: none;
+    align-items: center;
+    z-index: 2;
+}
+
+.active{
+    display: block;
+}
+
+.container .popup{
+    position: relative;
+    width: 30vw;
+    height: 55vh;
+    left: 650px;
+    top: 410px;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.popup h4{
+    position: relative;
+    left: 221px;
+    bottom: 30px;
+    font-size: 25px;
+    line-height: 30px;
     display: flex;
     align-items: center;
+    text-align: center;
+
+    color: #3867D6;
+}
+
+.popup .linha_azul{
+    position: relative;
+    width: 9vw;
+    height: .5vh;
+    left: 201px;
+    top: 40px;
+    display: flex;
+    color: #3867D6;
+    border-radius: 10px;
+    background-size: 100%;
+    background-image: url(img/linha_azul.svg);
+}
+
+.popup .icone_fechar{
+    position: relative;
+    margin: 0;
+    width: 1.9vw;
+    height: 3.9vh;
+    left: 470px;
+    top: 40px;
+    display: flex;
+    color: #3867D6;
+    z-index: 5;
+    background-size: 100%;
+    background-image: url(img/icone_fechar.svg);
+
+}
+
+.popup p{
+    position: relative;
+    width: 50vw;
+    height: 30vh;
+    left: 60px;
+    bottom: 140px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #141414;
+}
+
+.popup .inner_titulo{
+    position: relative;
+    width: 23vw;
+    height: 5vh;
+    left: 60px;
+    bottom:275px;
+    background: #EEEEEE;
+    z-index: 5;
+    border-radius: 10px;
+}
+
+.popup .inner_titulo p2{
+    position: relative;
+    color: black;
+    top: 12px;
+    left: 20px; 
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.popup p3{
+    position: relative;
+    width: 50vw;
+    height: 30vh;
+    left: 60px;
+    bottom: 380px;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #141414;
+}
+
+.popup .inner_descricao{
+    position: relative;
+    width: 23vw;
+    height: 10.5vh;
+    left: 60px;
+    bottom: 500px;
+    display: flex;
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.popup .inner_descricao textarea{
+    font-family: 'poppins'; 
+    width: 100%;
+    border:none;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
+
+.popup .inner_titulo input{
+    font-family: 'poppins';
+    width: 96%;
+    border:none;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+}
+
+.popup .inner_descricao p4{
+    position: relative;
+    width: 20vw;
+    height: 10vh;
+    left: 25px;
+    bottom: 1px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+
+    display: flex;
+    align-items: center;
+
+    color: #141414;
+}
+
+.popup .criar_task{
+    position: relative;
+    width: 23vw;
+    height: 5vh;
+    left: 61px;
+    bottom: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90.35deg, #4890F5 0%, #226ED8 99.7%);
+    border-radius: 20px;
+}
+
+.popup .criar_task p5{
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    color: #FFFFFF;
 }
 
 .inner_a_fazer{
@@ -191,7 +372,8 @@ footer{
     top: 310px;
     margin-top: 230px;
     margin-left: 169px;
-
+    overflow-y: auto;
+    overflow-x: hidden;
     background: #EEEEEE;
     border-radius: 10px;   
 }
@@ -295,6 +477,43 @@ footer{
     color: #DF0000;
 }
 
+
+/*.listContainer{
+    position: relative;
+    width: 253px;
+    height: 116px;
+    margin-left: 19px;
+    top: 14px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+/*.list-container{
+    position: relative;
+    width: 253px;
+    height: 116px;
+    margin-left: 19px;
+    top: 14px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+/*.adicionado{
+    position: relative;
+    width: 253px;
+    height: 116px;
+    margin-left: 1px;
+    top: 1px;
+    display: block;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+/*.adicionado .*/
+
 .parte_compras{
     position: relative;
     width: 253px;
@@ -333,7 +552,7 @@ footer{
 
 .parte_compras p{
     position: relative;
-    width: 139px;
+    width: 144px;
     height: 18px;
     left: 12px;
     top: 6px;
@@ -685,7 +904,9 @@ footer{
 
 }
 
-
+.container_frases .frase_do_dia{
+    display: none;
+}
 
 @media screen and (max-width: 600px){
     .inner_header h1{
@@ -737,6 +958,8 @@ footer{
         height: 44px;
         left: 22px;
         top: 8px;
+        background-size: 100%;
+        background-image: url(img/icone_frases.png);
     }
 
     .frase_frases .paragrafo_frase p{
@@ -745,6 +968,151 @@ footer{
 }
 
 @media screen and (max-width: 900px){
+    .carrosel{
+        height: 100%;
+        position: relative;
+    }
+
+    .carrosel_item_selecionado{
+        display: block;
+    }
+    
+    .container{
+        width: 100%;
+        right: 45px;
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .container .popup{
+        width: 80vw;
+        left: 34px;
+        top: 240px;
+    }
+
+    .popup h4{
+        left: 97px;
+        bottom: 40px;
+    }
+
+    .popup .linha_azul{
+        width: 36vw;
+        left: 89px;
+        top: 30px;
+    }
+
+    .popup p{
+        left: 32px;
+        bottom: 150px;
+        font-weight: 400;
+    }
+
+    .popup .inner_titulo{
+        width: 65vw;
+        height: 4.5vh;
+        left: 32px;
+        bottom: 278px;
+    }
+
+    .popup .inner_titulo p2{
+        display: none;
+    }
+
+    .popup p3{
+        font-weight: 400;
+        left: 32px;
+    }
+
+    .popup .inner_descricao{
+        width: 65vw;
+        height: 12vh;
+        left: 32px;
+        bottom: 495px;
+    }
+
+    .popup .inner_descricao p4{
+        display: none;
+    }
+
+    .popup .criar_task{
+        left: 32px;
+        width: 65vw;
+        height: 5vh;
+    }
+
+    .popup .icone_fechar{
+        width: 8vw;
+        height: 3.69vh;
+        top: 32px;
+        left: 270px;
+    }
+
+    .container_frases{
+        font-family: 'Poppins';
+        position: absolute;
+        width: 100%;
+        height: 121.7vh;
+        background: rgba(20, 20, 20, 0.4);
+        display: none;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .container_frases .popup_frases{
+        position: relative;
+        width: 80vw;
+        height: 26vh;
+        left: 34px;
+        top:240px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+
+    .popup_frases .icone_frases_container{
+        position: relative;
+        width: 12vw;
+        height: 5.5vh;
+        left: 15px;
+        bottom: 12px;
+        background-size: 100%;
+        background-image: url(img/icone_frases.png);
+    }
+
+    .popup_frases h4{
+        position: relative;
+        left: 70px;
+        bottom: 62px;
+        font-size: 13px;
+    }
+
+    .popup_frases p{
+        position: relative;
+        width: 65vw;
+        left: 22px;
+        bottom: 58px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .popup_frases .icone_fechar_frase{
+        position: relative;
+        width: 7vw;
+        height: 3.2vh;
+        left: 275px;
+        top: 25px;
+        display: flex;
+        background-size: 100%;
+        background-image: url(img/icone_fechar.svg);
+    }
+
+    .popup_frases .frase_do_dia{
+        display: none;
+    }
+
     .a_fazer .icone_a_fazer{
         width: 30px;
         height: 30px;
@@ -757,8 +1125,8 @@ footer{
         width:100vw;
         height:80vh;
         left: 45px;
-        top: 128px;
-
+        top: 60px;
+        z-index: 5;
     }
     
     .a_fazer p1{
@@ -790,7 +1158,6 @@ footer{
     }
     
     .a_fazer .parte_conta_luz{
-        position: absolute;
         top: 15px;
     }
     
@@ -825,7 +1192,7 @@ footer{
     
     .parte_compras{
         position: relative;
-        top: 35px;
+        top: 9px;
     }
     
     .parte_compras h4{
@@ -857,7 +1224,7 @@ footer{
     
     .parte_manicure{
         position: relative;
-        top: 37px;
+        top: 5px;
     }
     
     .parte_manicure h4{
@@ -877,40 +1244,150 @@ footer{
         bottom: 292px;
     }
 
-    .inner_a_fazer .icone_seta_mobile{
+    .icone_seta_mobile{
         position: relative;
         width: 3vw;
         height: 2.3vh;
-        top: 202px;
-        right: 32px;
+        top: 45vh;
+        left: 20px;
         background-size: 100%;
+        z-index: 5;
         color: #226ED8;
         background-image: url(img/icone_seta_mobile.svg);
     }
 
-    .inner_a_fazer .icone_seta_2{
-        position: relative;
+    .icone_seta_2{
+        position: absolute;
         width: 3vw;
         height: 2.3vh;
-        top: 185px;
-        left: 310px;
+        top: 44.87vh;
+        left: 360px;
         background-size: 100%;
+        z-index: 6;
         transform: scaleX(-1);
         color: #226ED8;
         background-image: url(img/icone_seta_mobile.svg);
     }
 
-    .inner_a_fazer .icone_carrosel{
+    .icone_carrosel{
         position: relative;
         width: 3.2vw;
         height: 1.47vh;
-        top: 435px;
-        left: 110px;
+        top: 625px;
+        left: 167px;
         background-size: 100%;
         display: flex;
         color:  #226ED8;
         background-image: url(img/icone_carrosel.svg);
     }
+
+    .icone_carrosel_cinza{
+        position: relative;
+        width: 3.2vw;
+        height: 1.47vh;
+        top: 612px;
+        left: 198px;
+        background-size: 100%;
+        display: flex;
+        color: #C4C4C4;
+        background-image: url(img/icone_carrosel_cinza.svg);
+    }
+
+    .icone_carrosel_cinza2{
+        position: relative;
+        width: 3.2vw;
+        height: 1.47vh;
+        top: 599px;
+        left: 229px;
+        background-size: 100%;
+        display: flex;
+        color: #C4C4C4;
+        background-image: url(img/icone_carrosel_cinza.svg);
+    }
+
+    .em_andamento, .feito{
+        position: absolute;
+        width:100vw;
+        height:80vh;
+        left: 45px;
+        top: 60px;
+        z-index: 5;
+    }
+    
+    .em_andamento p, .feito p{
+        position: absolute;
+        height: 30px;
+        left: 8.5px;
+        top: 70px;
+        padding-top: 9px;
+        font-size: 27px;
+        margin: 0;
+    }
+
+    .inner_em_andamento, .inner_feito{
+        position: relative;
+        width: 33vh;
+        height: 110.6vw;
+        left: 0.5px;
+        top: 6px;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-bottom: 40px;
+        background: #EEEEEE;
+        border-radius: 10px;
+    }
+
+    .feito .inner_feito{
+        position: relative;
+        width: 33vh;
+        height: 110.6vw;
+        left: 0.5px;
+        top: 6px;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-bottom: 40px;
+        background: #EEEEEE;
+        border-radius: 10px;
+    }
+
+    .inner_em_andamento .fazer_manicure{
+        position: relative;
+        width: 254px;
+        height: 7.9vh;
+        margin-left: 20px;
+        bottom: 1px;
+
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+    
+    .inner_feito .fazer_manicure_feito{
+        position: relative;
+        width: 254px;
+        height: 7.9vh;
+        bottom: 1px;
+
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+    .fazer_manicure p, .fazer_manicure_feito p{
+        position: absolute;
+        width: 145px;
+        height: 18px;
+        left: 0px;
+        top: 30px;
+        font-size: 14px;
+        margin-left: 16px;
+    }
+
+    .slide{
+        display: none;
+    }
+
+    .on{
+        display: flex;
+    }
+
 }
 /*PROXIMA ATIVIDADE: FAZER @MEDIA PARA O FOOTER*/
 @media screen and (max-width: 900px){

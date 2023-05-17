@@ -478,6 +478,7 @@ footer{
 }
 
 
+
 /*.listContainer{
     position: relative;
     width: 253px;
@@ -517,8 +518,8 @@ footer{
 .parte_compras{
     position: relative;
     width: 253px;
-    height: 116px;
     margin-left: 19px;
+    padding-bottom: 10px;
     top: 14px;
 
     background: #FFFFFF;
@@ -531,6 +532,7 @@ footer{
     height: 21px;
     left: 12px;
     top: 13px;
+    overflow-wrap: break-word;
     font-size: 14px;
     line-height: 21px;
     display: flex;
@@ -561,6 +563,10 @@ footer{
     line-height: 18px;
     display: flex;
     align-items: center;   
+    color: #141414;
+}
+
+.parte_compras .Aberto{
     color: #002D6C;
 }
 
@@ -581,15 +587,19 @@ footer{
 .parte_compras p2{
     position: relative;
     width: 163px;
-    height: 36px;
     left: 12px;
     bottom: 3px;
+    max-width: 100%;
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
-    display: flex;
+    display: none;
     align-items: center;
     color: #141414;
+}
+
+.parte_compras .visible{
+    display: flex;
 }
 
 .parte_compras .icone_direita{
@@ -597,7 +607,7 @@ footer{
     width: 20px;
     height: 20px;
     left: 221px;
-    top: 84px;
+    top: 50px;
     background-image: url(img/icone_direita.svg);
 }
 

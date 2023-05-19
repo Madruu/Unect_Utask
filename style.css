@@ -429,23 +429,13 @@ footer{
     background-image: url(img/icone_xevron.svg);
 }
 
-.a_fazer .parte_conta_luz .icone_trespontos{
-    position: absolute;
-    width: 5px;
-    height: 15px;
-    left: 235px;
-    top: 14px;
-    background-size: 100%;
-    background-image: url(img/icone_trespontos.svg);
-}
-
 .botao_excluir{
     position: absolute;
     width: 71px;
     height: 31px;
     left: 173px;
     top: 32px;
-
+    z-index: 5;
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
@@ -472,6 +462,7 @@ footer{
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+
     display: flex;
     align-items: center;
     color: #DF0000;
@@ -521,7 +512,7 @@ footer{
     margin-left: 19px;
     padding-bottom: 10px;
     top: 14px;
-
+    
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -541,7 +532,7 @@ footer{
     color: #141414;
 }
 
-.parte_compras .icone_3pts{
+.icone_3pts{
     position: absolute;
     width: 5px;
     height: 15px;
@@ -551,6 +542,10 @@ footer{
     color: #141414;
     background-image: url(img/icone_3pts.svg);
 }
+
+/*.parte_compras .icone_3pts {
+    
+}*/
 
 .parte_compras p{
     position: relative;
@@ -570,6 +565,46 @@ footer{
     color: #002D6C;
 }
 
+.parte_compras .open{
+    color: #226ED8;
+}
+
+.exibe .botao_excluir{
+    display: block;
+}
+
+.exibe .icone_3pts{
+    background-image: url(img/icone_trespontos.svg);
+}
+
+.botao_excluir{
+    display:none;
+}
+
+
+/*.att{
+    display: block;
+}*/
+
+
+/*.atualiza{
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+}*/
+
+.parte_compras .aparece_pontos{
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    left: 235px;
+    top: 14px;
+    background-size: 100%;
+    
+    color: #141414;
+    background-image: url(img/icone_3pts.svg);
+}
+
 .parte_compras .icone_paracima{
     position: absolute;
     width: 8px;
@@ -581,10 +616,10 @@ footer{
     background-size: 100%;
     color: #002D6C;
     background-image: url(img/icone_paracima.svg);
-
+    
 }
 
-.parte_compras p2{
+.parte_compras .descricao{
     position: relative;
     width: 163px;
     left: 12px;
@@ -599,7 +634,7 @@ footer{
 }
 
 .parte_compras .visible{
-    display: flex;
+    display: block;
 }
 
 .parte_compras .icone_direita{
@@ -611,13 +646,28 @@ footer{
     background-image: url(img/icone_direita.svg);
 }
 
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 6px solid #EEEEEE;
+    background: #C4C4C4;;
+    border-radius: 10px;
+}
+
 .parte_manicure{
     position: relative;
     width: 254px;
     height: 74px;
     left: 18px;
     top: 12px;
-
+    
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -632,7 +682,7 @@ footer{
     line-height: 21px;
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -647,20 +697,10 @@ footer{
     line-height: 18px;
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
-.parte_manicure .icone_3pts{
-    position: absolute;
-    width: 5px;
-    height: 15px;
-    left: 235px;
-    top: 14px;
-    background-size: 100%;
 
-    color: #141414;
-    background-image: url(img/icone_3pts.svg);
-}
 
 .parte_manicure .scroll{
     position: relative;
@@ -668,7 +708,7 @@ footer{
     height: 270px;
     left: 263px;
     bottom: 292px;
-
+    
     background: #C4C4C4;
     border-radius: 20px;
 }
@@ -686,7 +726,7 @@ footer{
     line-height: 30px;
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -700,7 +740,7 @@ footer{
     font-size: 27px;
     line-height: 30px;
     display: flex;
-
+    
     color: #141414;
 }
 
@@ -710,7 +750,7 @@ footer{
     height: 17.6vw;
     left: 493px;
     bottom: 269px;
-
+    
     background: #EEEEEE;
     border-radius: 10px;
 }
@@ -721,7 +761,7 @@ footer{
     height: 7.9vh;
     margin-left: 20px;
     bottom: 1px;
-
+    
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -736,7 +776,7 @@ footer{
     line-height: 21px;
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -751,7 +791,7 @@ footer{
     display: flex;
     align-items: center;
     margin: 0;
-
+    
     color: #141414;
 }
 
@@ -773,9 +813,9 @@ footer{
     height: 20px;
     left: 195px;
     top: 40px;
-
+    
     background-image: url(img/icone_esquerda.svg);
-
+    
 }
 
 .fazer_manicure .icone_direita{
@@ -785,7 +825,7 @@ footer{
     left: 220px;
     top: 40px;
     bottom: 18px;
-
+    
     background-image: url(img/icone_direita.svg);
 }
 
@@ -803,7 +843,7 @@ footer{
     line-height: 30px;
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -816,10 +856,10 @@ footer{
     font-weight: 400;
     font-size: 27px;
     line-height: 30px;
-
+    
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -829,7 +869,7 @@ footer{
     height: 36.3vh;
     right: 58px;
     top: 129.5px;
-
+    
     background: #EEEEEE;
     border-radius: 10px;
 }
@@ -840,7 +880,7 @@ footer{
     height: 7.9vh;
     left: 23px;
     top: 0px;
-
+    
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -853,11 +893,11 @@ footer{
     bottom: 55.41px;
     font-size: 14px;
     line-height: 21px;
-
+    
     display: flex;
     align-items: center;
     text-decoration-line: line-through;
-
+    
     color: #141414;
 }
 
@@ -870,10 +910,10 @@ footer{
     bottom: 17.57px;
     font-size: 14px;
     line-height: 18px;
-
+    
     display: flex;
     align-items: center;
-
+    
     color: #141414;
 }
 
@@ -886,7 +926,7 @@ footer{
     top: 19%;
     bottom: 67.35%;
     background-size: 100%;
-
+    
     background-image: url(img/icone_3pts.svg);
 }
 
@@ -898,9 +938,9 @@ footer{
     right: 4.74%;
     top: 56.05%;
     bottom: 18.92%;
-
+    
     background-image: url(img/icone_atualizar.svg);
-
+    
 }
 
 .fazer_manicure_feito .icone_esquerda{
@@ -909,13 +949,27 @@ footer{
     height: 20px;
     left: 195px;
     top: 41.5px;
-
+    
     background-image: url(img/icone_esquerda.svg);
-
+    
 }
 
 .container_frases .frase_do_dia{
     display: none;
+}
+
+.att{
+    display: block;
+}
+
+.parte_compras .inner_em_andamento  .att{
+    display: flex;
+    /*height: 10vh;*/
+}
+
+.parte_compras .inner_feito  .att{
+    display: flex;
+    /*height: 10vh;*/
 }
 
 @media screen and (max-width: 600px){
@@ -1226,10 +1280,12 @@ footer{
     .parte_compras p2{
         font-size: 12px;
     }
+
+    
     
     .parte_compras .icone_direita{
         left: 221px;
-        top: 84px;
+        top: 50px;
     }
     
     .parte_manicure{

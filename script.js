@@ -1,9 +1,12 @@
+//Abrir o popup da task
 
 function togglePopup(){
     var Element = document.getElementById("popup1")
     Element.classList.toggle("active");
 }
 
+
+//Carrosel
 
 const carrosel = document.querySelectorAll(".slide");
 const btnprev = document.getElementById("icone_prev");
@@ -44,6 +47,7 @@ btnprev.addEventListener('click', prevSlider);
 
 console.log(carrosel);
 
+
 //Função para criar task
 
 const listContainer = document.getElementById("list-container");
@@ -74,23 +78,74 @@ function addTask(e){
         
         const descricao = document.createElement('p2');
         descricao.innerHTML = descricaoinput.value;
+        descricao.classList.add("descricao");
+
+        const btExc = document.createElement('div');
+        btExc.classList.add("botao_excluir");
+
+        const lixo = document.createElement('div');
+        lixo.classList.add("icone_lixo");
+
+        const paragrafo_excl = document.createElement('p2');
+        paragrafo_excl.innerHTML = "Excluir";
+
+        const update = document.createElement('div');
+        update.classList.add("icone_direita");
         
+        
+        btExc.append(lixo, paragrafo_excl);
         paragrafo.append(imgXevron);
-        parteCompras.append(titulo, paragrafo, icone3pts, descricao);
+        parteCompras.append(titulo, paragrafo, btExc, update, icone3pts, descricao);
         
         listContainer.append(parteCompras);
         togglePopup();
     }
+    
     tituloinput.innerHTML = '';
     descricaoinput.innerHTML = '';
     seto = document.querySelectorAll(".parte_compras");
     seto.forEach((item) => {
         item.addEventListener('click', abreFechaDescricao);
     });
+
+    let exclue = document.querySelectorAll(".botao_excluir");
+
+    exclue.forEach((botao) => {
+        botao.addEventListener('click', deletar);
+    })
+
+    let setting = document.querySelectorAll(".icone_3pts");
+    
+    setting.forEach((botao) => {
+        botao.addEventListener('click', abreSettings);
+    })
+    
+    let update = document.querySelectorAll('.icone_direita');
+    
+    update.forEach((botao) => {
+        botao.addEventListener('click', atualiza_task);
+    })
+}
+
+function abreSettings(event){
+    const item = event.target;
+    item.parentElement.classList.toggle('exibe');
+}
+
+function deletar(event){
+    const item = event.target;
+    if(item.classList.contains("botao_excluir")){
+        item.parentElement.remove();
+    } else {
+        item.parentElement.parentElement.remove();
+    }
 }
 
 let seto = document.querySelectorAll(".parte_compras");
 console.log(seto);
+
+
+//Abrir/fechar descrição
 
 function abreFechaDescricao(event){
     const descricao = event.target;
@@ -109,105 +164,81 @@ function abreFechaDescricao(event){
 botaoTask.addEventListener('click', addTask);
 
 
+//Update Task
+
+function atualiza_task(event){
+    /*const item = event.target;
+    const atual = item.parentElement.parentElement.id;
+    item.parentElement.classList.toggle('move')
+    if(item.classList.contains('icone_direita')){
+        if(atual == 'list-container'){
+            document.getElementById('andamento').append(update);
+        } else if(atual == 'andamento'){
+            document.getElementById('_feito_').append(update);
+            item.src = 'img/icone_esquerda.svg';
+        } else {
+            document.getElementById('list-container').append(update);
+            item.src = 'img/icone_direita.svg';
+        }
+    }*/
+    const item = event.target;
+    const task = item.parentElement;
+    const atual = item.parentElement.parentElement.id;
+    item.parentElement.classList.toggle('att');
+  //  Mover para frente
+    if (item.classList.contains('icone_direita')) {
+        if (atual == 'list-container') {
+            document.getElementById('_andamento_').append(task);
+        } else if (atual == '_andamento_') {
+            document.getElementById('_feito_').append(task);
+            item.src = 'img/icone_esquerda.svg';
+        } else {
+            document.getElementById('list-container').append(task);
+            item.src = 'img/icone_direita.svg';
+        }
+    }
+        const parteCompras = document.createElement('div');
+        parteCompras.classList.add("parte_compras");
+        
+        const titulo = document.createElement('h4');
+        titulo.innerHTML = tituloinput.value;
+        
+        const paragrafo = document.createElement('p');
+        paragrafo.innerHTML = "Ler descrição";
+        
+        const imgXevron = document.createElement('img');
+        imgXevron.src = "img/icone_xevron.svg";
+        imgXevron.classList.add("icone_cima");
+        
+        const icone3pts = document.createElement('div');
+        icone3pts.classList.add("icone_3pts");
+        
+        const descricao = document.createElement('p2');
+        descricao.innerHTML = descricaoinput.value;
+        descricao.classList.add("descricao");
+
+        const btExc = document.createElement('div');
+        btExc.classList.add("botao_excluir");
+
+        const lixo = document.createElement('div');
+        lixo.classList.add("icone_lixo");
+
+        const paragrafo_excl = document.createElement('p2');
+        paragrafo_excl.innerHTML = "Excluir";
+
+        const update = document.createElement('div');
+        update.classList.add("icone_direita");
+        
+        btExc.append(lixo, paragrafo_excl);
+        paragrafo.append(imgXevron);
+        parteCompras.append(titulo, paragrafo, btExc, update, icone3pts, descricao);
+
+}
+
+
 //Excluir uma task
 
-const deletar = document.getElementById("delete");
+/*const deletar = document.getElementById("delete");
 const deletou = document.getElementById("deletou");
 const par = document.getElementById("par");
-
-deletar.addEventListener('click', function(e){
-    if(e.target.tagName = "botao_excluir"){
-        e.target.parentElement.remove();
-    }
-}, false)
-
-deletou.addEventListener('click', function(e){
-    if(e.target.tagName = "icone_lixo"){
-        e.target.parentElement.parentElement.remove();
-    }
-})
-
-par.addEventListener('click', function(e){
-    if(e.target.tagName = "par"){
-        e.target.parentElement.parentElement.remove();
-    }
-})
-
-function deleteTask(event){
-    
-    
-    
-    /*const deletou = document.createElement('div');
-    deletou.classList.add("botao_excluir");
-    const close = document.querySelectorAll(".botao_excluir");
-    for(let i = 0; close.length; i++){
-        close[i].addEventListener('click', ()=>{
-            close[i].parentElement.style.display = "none";
-        })
-    }*/
-    /*e.preventDefault();
-    /*const botaoDel = document.createElement('img');
-    botaoDel.src = "img/icone_lixo.svg";
-    botaoDel.classList.add("icone_deletar");
-
-    const paragrafoDel = document.createElement('p2');
-    paragrafoDel.innerHTML = "Excluir";
-    /*const lixo = e.target;
-    if(lixo.classList.contains("delete")){
-        e.target.parentElement.remove();
-    }
-    paragrafoDel.prepend(botaoDel);*/
-}
-
-//deletar.addEventListener('click', deleteTask);
-console.log(deletar);
-
-
-/*<div class = "parte_manicure">
-<h4>Fazer manicure</h4>
-                <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
-                <div class = "icone_3pts"></div>
-                <div class = "scroll"></div>
-            </div>*/ 
-
-/*const carrosel = document.querySelector(".inner_a_fazer");
-
-let isDragStart = false;
-
-const dragStart = () => {
-    isDragStart = true;
-}
-
-const dragging = (e) => {
-    if(!isDragStart) return;
-    //e.preventDefault();
-    carrosel.scrollLeft= e.pageX;
-}
-
-
-carrosel.addEventListener("mousedown", dragStart);
-carrosel.addEventListener("mousemove", dragging);
-
-/*document.querySelectorAll(".carrosel").forEach(carrosel => {
-    const itens = carrosel.querySelectorAll(".carrosel");
-    const botaohtml = Array.from(itens, () => {
-        return '<div class = "a_fazer></div>', '<div class = "em_andamento></div>', '<div class = "feito></div>';
-    });
-    console.log(botaohtml);
-    
-    carrosel.insertAdjacentHTML("beforeend", '
-        <div class = "a_fazer">
-
-        </div>
-    ');
-
-    const botoes = carrosel.querySelectorAll(".icone_seta_mobile");
-    const botao1 = carrosel.querySelectorAll(".icone_seta_2");
-
-    botoes.forEach((botao, i) => {
-        botao.addEventListener("click", () => {
-            itens.forEach(item => item.classList.remove("carrosel_item_selecionado"));
-            botoes.forEach(botao => botao.classList.remove("carrosel_item_selecionado"));
-        });
-    });
-});*/
+*/

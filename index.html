@@ -94,7 +94,7 @@
             <div class = "inner_a_fazer" id = "list-container">
                 <div class = "parte_conta_luz">
                     <div class = "icone_xevron"></div>
-                    <div class = "icone_trespontos"></div>
+                    <div class = "icone_3pts"></div>
                     <h4>Pagar conta de luz</h4>
                     <p>Ler descrição</p>
                     <div class = "botao_excluir" id = "delete">
@@ -103,24 +103,32 @@
                 </div>
             </div>
             <div class = "parte_compras">
+                <div class = "botao_excluir" id = "delete">
+                    <div class = "icone_lixo" id = "deletou"></div>
+                    <p2 id = "par">Excluir</p2>
+                </div>
                 <div class = "icone_paracima"></div>
-                <div class = "icone_direita"></div>
-                <div class = "icone_3pts"></div>
+                <div class = "icone_direita" onclick = "atualiza_task(event)"></div>
+                <div class = "icone_3pts" id = "tresptsCinza" onclick = "abreSettings()"></div>
                 <h4>Fazer compras no mercado</h4>
                 <p>Esconder descrição</p>
-                <p2>Comprar batata, cenoura, feijão, alho, arroz e pipoca.</p2>
+                <p2 class = "descricao">Comprar batata, cenoura, feijão, alho, arroz e pipoca.</p2>
             </div>
             <div class = "parte_manicure">
                 <h4>Fazer manicure</h4>
                 <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
                 <div class = "icone_3pts"></div>
+                <div class = "botao_excluir" id = "delete">
+                    <div class = "icone_lixo" id = "deletou"></div>
+                <p2 id = "par">Excluir</p2>
+            </div>
             </div>
 
     </div>
         </div>
         <div class = "em_andamento slide">
             <p>Em andamento</p>
-            <div class = "inner_em_andamento">
+            <div class = "inner_em_andamento" id = "_andamento_">
                 <div class = "fazer_manicure">
                     <h4>Fazer manicure</h4>
                     <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>
@@ -132,7 +140,7 @@
         </div>
     <div class = "feito slide">
         <p>Feito</p>
-        <div class = "inner_feito">
+        <div class = "inner_feito" id = "_feito_">
             <div class = "fazer_manicure_feito">
                 <h4>Fazer manicure</h4>
                 <p>Ler descrição<img src="img/icone_xevron.svg" alt="icone seta para baixo"></p>

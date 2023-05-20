@@ -395,6 +395,7 @@ footer{
     left: 15px;
     top: 4px;
     margin: 0; 
+    display: none;
 }
 
 .a_fazer .parte_conta_luz{
@@ -406,6 +407,7 @@ footer{
     
     background: #FFFFFF;
     border-radius: 10px;
+    display: none;
 }
 
 .a_fazer .parte_conta_luz p{
@@ -427,6 +429,26 @@ footer{
     top: 46px;
     background-size: 100%;
     background-image: url(img/icone_xevron.svg);
+}
+
+.a_fazer .icone_esquerda{
+    display: none;
+}
+
+.feito .icone_direita{
+    display: none;
+}
+
+.em_andamento .icone_atualizar{
+    display: none;
+}
+
+.a_fazer .icone_atualizar{
+    display: none;
+}
+
+.feito .parte_compras .icone_atualizar{
+    display: flex;
 }
 
 .botao_excluir{
@@ -515,6 +537,7 @@ footer{
     
     background: #FFFFFF;
     border-radius: 10px;
+    
 }
 
 .parte_compras h4{
@@ -581,18 +604,6 @@ footer{
     display:none;
 }
 
-
-/*.att{
-    display: block;
-}*/
-
-
-/*.atualiza{
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 12px;
-}*/
-
 .parte_compras .aparece_pontos{
     position: absolute;
     width: 5px;
@@ -646,6 +657,23 @@ footer{
     background-image: url(img/icone_direita.svg);
 }
 
+.parte_compras .icone_esquerda{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 198px;
+    top: 50.4px;
+    background-image: url(img/icone_esquerda.svg);
+}
+
+.parte_compras .icone_atualizar{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 225px;
+    top: 50px;
+    background-image: url(img/icone_atualizar.svg);
+}
 
 ::-webkit-scrollbar {
     width: 18px;
@@ -667,7 +695,7 @@ footer{
     height: 74px;
     left: 18px;
     top: 12px;
-    
+    display:none;
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -730,12 +758,12 @@ footer{
     color: #141414;
 }
 
-.em_andamento p{
+.em_andamento p1{
     position: absolute;
     width: 219px;
     height: 30px;
     left: 495px;
-    bottom: 608px;
+    bottom: 634px;
     font-weight: 400;
     font-size: 27px;
     line-height: 30px;
@@ -748,7 +776,7 @@ footer{
     position: relative;
     width: 31.6vh;
     height: 17.6vw;
-    left: 493px;
+    left: 496px;
     bottom: 269px;
     
     background: #EEEEEE;
@@ -759,11 +787,12 @@ footer{
     position: relative;
     width: 13.3vw;
     height: 7.9vh;
-    margin-left: 20px;
+    margin-left: 15px;
     bottom: 1px;
     
     background: #FFFFFF;
     border-radius: 10px;
+    display:none;
 }
 
 .fazer_manicure h4{
@@ -813,7 +842,7 @@ footer{
     height: 20px;
     left: 195px;
     top: 40px;
-    
+    display: flex;
     background-image: url(img/icone_esquerda.svg);
     
 }
@@ -847,7 +876,7 @@ footer{
     color: #141414;
 }
 
-.feito p{
+.feito p1{
     position: relative;
     width: 48px;
     height: 30px;
@@ -883,6 +912,7 @@ footer{
     
     background: #FFFFFF;
     border-radius: 10px;
+    display:none;
 }
 
 .fazer_manicure_feito h4{
@@ -962,14 +992,23 @@ footer{
     display: block;
 }
 
-.parte_compras .inner_em_andamento  .att{
-    display: flex;
-    /*height: 10vh;*/
+.parte_compras .inner_em_andamento .att{
+    
+    display: block;
+    width: 20px;
+    height: 20px;
+    bottom: 351px;
+    z-index: 5;
 }
 
-.parte_compras .inner_feito  .att{
-    display: flex;
-    /*height: 10vh;*/
+.parte_compras .inner_feito .att{
+    /*position: absolute;*/
+    display: block;
+    width: 20px;
+    height: 20px;
+    left: 195px;
+    top: 50px;
+    z-index: 5;
 }
 
 @media screen and (max-width: 600px){
@@ -1380,7 +1419,7 @@ footer{
         z-index: 5;
     }
     
-    .em_andamento p, .feito p{
+    .em_andamento p1, .feito p1{
         position: absolute;
         height: 30px;
         left: 8.5px;
@@ -1496,7 +1535,3 @@ footer{
         top: 25px;
     }
 } 
-
-
-/*PROCURAR COMO CRIAR MAIS DE UM @MEDIA NO CSS*/
-/*TROCAR TODAS AS POSIÇÕES DOS RETÂNGULOS PARA VW E VH EM VEZ DE PX*/

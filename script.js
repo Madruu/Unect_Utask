@@ -91,11 +91,17 @@ function addTask(e){
 
         const update = document.createElement('div');
         update.classList.add("icone_direita");
+
+        const voltar = document.createElement('div');
+        voltar.classList.add("icone_esquerda");
+
+        const remodelar = document.createElement('div');
+        remodelar.classList.add("icone_atualizar");
         
         
         btExc.append(lixo, paragrafo_excl);
         paragrafo.append(imgXevron);
-        parteCompras.append(titulo, paragrafo, btExc, update, icone3pts, descricao);
+        parteCompras.append(titulo, paragrafo, btExc, remodelar, voltar, update, icone3pts, descricao);
         
         listContainer.append(parteCompras);
         togglePopup();
@@ -123,6 +129,18 @@ function addTask(e){
     let update = document.querySelectorAll('.icone_direita');
     
     update.forEach((botao) => {
+        botao.addEventListener('click', atualiza_task);
+    })
+
+    let voltar = document.querySelectorAll('.icone_esquerda');
+
+    voltar.forEach((botao) => {
+        botao.addEventListener('click', atualiza_task);
+    })
+
+    let remodelar = document.querySelectorAll('.icone_atualizar');
+
+    remodelar.forEach((botao) => {
         botao.addEventListener('click', atualiza_task);
     })
 }
@@ -167,25 +185,12 @@ botaoTask.addEventListener('click', addTask);
 //Update Task
 
 function atualiza_task(event){
-    /*const item = event.target;
-    const atual = item.parentElement.parentElement.id;
-    item.parentElement.classList.toggle('move')
-    if(item.classList.contains('icone_direita')){
-        if(atual == 'list-container'){
-            document.getElementById('andamento').append(update);
-        } else if(atual == 'andamento'){
-            document.getElementById('_feito_').append(update);
-            item.src = 'img/icone_esquerda.svg';
-        } else {
-            document.getElementById('list-container').append(update);
-            item.src = 'img/icone_direita.svg';
-        }
-    }*/
     const item = event.target;
     const task = item.parentElement;
     const atual = item.parentElement.parentElement.id;
     item.parentElement.classList.toggle('att');
-  //  Mover para frente
+
+    //Mover para frente
     if (item.classList.contains('icone_direita')) {
         if (atual == 'list-container') {
             document.getElementById('_andamento_').append(task);
@@ -197,48 +202,20 @@ function atualiza_task(event){
             item.src = 'img/icone_direita.svg';
         }
     }
-        const parteCompras = document.createElement('div');
-        parteCompras.classList.add("parte_compras");
-        
-        const titulo = document.createElement('h4');
-        titulo.innerHTML = tituloinput.value;
-        
-        const paragrafo = document.createElement('p');
-        paragrafo.innerHTML = "Ler descrição";
-        
-        const imgXevron = document.createElement('img');
-        imgXevron.src = "img/icone_xevron.svg";
-        imgXevron.classList.add("icone_cima");
-        
-        const icone3pts = document.createElement('div');
-        icone3pts.classList.add("icone_3pts");
-        
-        const descricao = document.createElement('p2');
-        descricao.innerHTML = descricaoinput.value;
-        descricao.classList.add("descricao");
 
-        const btExc = document.createElement('div');
-        btExc.classList.add("botao_excluir");
-
-        const lixo = document.createElement('div');
-        lixo.classList.add("icone_lixo");
-
-        const paragrafo_excl = document.createElement('p2');
-        paragrafo_excl.innerHTML = "Excluir";
-
-        const update = document.createElement('div');
-        update.classList.add("icone_direita");
-        
-        btExc.append(lixo, paragrafo_excl);
-        paragrafo.append(imgXevron);
-        parteCompras.append(titulo, paragrafo, btExc, update, icone3pts, descricao);
-
+    if(item.classList.contains('icone_atualizar')){
+        if(atual == '_feito_'){
+            document.getElementById('list-container').append(task);
+        }
+    }
+    
+    //mover para trás
+    if (item.classList.contains('icone_esquerda')){
+        if(atual == '_andamento_'){
+            document.getElementById('list-container').append(task);
+        } else {
+            document.getElementById('_andamento_').append(task);
+            item.parentElement.parentElement.lastChild.src = 'img/icone_atualizar.svg';
+        }
+    }  
 }
-
-
-//Excluir uma task
-
-/*const deletar = document.getElementById("delete");
-const deletou = document.getElementById("deletou");
-const par = document.getElementById("par");
-*/
